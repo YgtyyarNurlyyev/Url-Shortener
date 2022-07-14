@@ -22,7 +22,7 @@ def index(request):
         link = request.POST['link']
         uid = str(uuid.uuid4())[:5]
         short_url = Url(link=link, short_link=uid, author=request.user)
-        short_link = 'http://localhost:8000/' + uid
+        short_link = 'linkurl-shortener.herokuapp.com/' + uid
         short_url.save()
 
     context = {
